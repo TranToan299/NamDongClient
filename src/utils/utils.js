@@ -25,13 +25,13 @@ const Utils = {
   },
   async uploadFile(file, dirName) {
     const fileName = `${Date.now()}-${Utils.formatVN(file?.name)}`;
-    const config = {
-      bucketName: "nam-dong",
-      dirName: `namdong/${dirName}`,
-      region: "ap-southeast-1",
-      accessKeyId: "AKIATHIGM7KOLR3C4BML",
-      secretAccessKey: "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",
-    };
+    // const config = {
+    //   bucketName: "nam-dong",
+    //   dirName: `namdong/${dirName}`,
+    //   region: "ap-southeast-1",
+    //   accessKeyId: "123",
+    //   secretAccessKey: "123",
+    // };
 
     const s3 = new ReactS3Client(config);
 
