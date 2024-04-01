@@ -1,0 +1,51 @@
+.content {
+  .title {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 600;
+
+    &__sub {
+      margin-bottom: 10px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  & > ul > li {
+    list-style: outside;
+    margin-left: 12px;
+    margin-bottom: 10px;
+  }
+}
+
+.subList > li {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-bottom: 10px;
+  list-style: circle;
+}
+
+.table {
+  width: 80%;
+  margin-bottom: 30px;
+  @include mobile {
+  width: 100%;
+
+  }
+  & td,
+  & thead {
+    border: 1px solid #ddd;
+    padding: 8px;
+    font-size: 16px;
+  }
+  & thead td {
+    text-align: center;
+    background-color: $primaryColor;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .area {
+    width: 40%;
+  }
+}

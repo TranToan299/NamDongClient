@@ -1,0 +1,177 @@
+.mainHeader {
+  box-shadow: 0px 21px 41px 17px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  height: 72px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  // .logo {
+  //   width: 55px;
+  //   height: 55px;
+  //   position: absolute;
+  //   margin-right:40px;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  // }
+  .toolbar {
+    position: absolute;
+    display: flex;
+    right: 80px;
+    top: 7px;
+    &__item {
+      padding: 22px;
+      cursor: pointer;
+    }
+    &__item.searchActive {
+      transition: all 1s ease;
+      opacity: 0;
+      z-index: -2;
+    }
+    &__search {
+      display: flex;
+      position: relative;
+    }
+    &__btnSearch {
+      background-color: transparent;
+      z-index: 2;
+      transition: all 1.5s ease;
+      border: none;
+      overflow: hidden;
+    }
+    &__btnSearch.searchActive {
+      transform: translateX(58px);
+    }
+    .inputSearch {
+      position: absolute;
+      cursor: pointer;
+      top: 20px;
+      right: 0px;
+      width: 24px;
+      height: 24px;
+      outline: none;
+      border: none;
+      background-color: transparent;
+      transition: all 1s ease;
+      opacity: 0;
+
+      // &:focus {
+      //   outline:none;
+      // }
+    }
+    .inputSearch.searchActive {
+      width: 200px;
+      opacity: 1;
+      transform: translateX(50px);
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      transition: all 1s ease;
+    }
+    .searchResult {
+      // Scrollbar
+      ::-webkit-scrollbar {
+        width: 12px;
+    }
+    
+    /* Track */
+    ::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+    }
+    
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        -webkit-border-radius: 10px;
+        border-radius: 10px;
+        background: rgba(255,0,0,0.8); 
+        -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+    }
+      // end Scrollbar
+      width: 300px;
+      max-height: 300px;
+      z-index: 10000000;
+      background-color: white;
+      overflow-y: scroll;
+      overflow-x: hidden;
+      border: 1px solid $borderColor;
+      position: absolute;
+      top: 65px;
+      right: -60px;
+      .itemSearch {
+        background-color: "white";
+        text-align: center;
+        cursor: pointer;
+        & + .itemSearch {
+          margin-top: 15px;
+        }
+        &:hover .itemSearch__text {
+          transition: all 0.5s ease;
+          color: $primaryColor;
+        }
+      }
+      &__unActive {
+        display: none;
+      }
+    }
+  }
+  .navContainer {
+    overflow: hidden;
+    .nav__item {
+      transition: all 1.5s ease;
+      transform: translateX(2000%);
+      opacity: 0;
+    }
+    .hideItem {
+      opacity: 1;
+      margin-top: 15px;
+      transform: translateX(0);
+      transition: all 1.5s ease;
+    }
+  }
+}
+
+.drawerItem {
+  display: block;
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 25px;
+}
+
+.flag {
+  height: 100%;
+  transform: translateY(11px);
+  background-color: transparent;
+  opacity: 1;
+  z-index: 2;
+  transition: all 1.5s ease;
+
+  &.searchActive {
+    transform: translate(58px, 15px);
+    opacity: 0;
+  }
+  &__icon {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+  }
+  &__dropdown {
+    width: 300px;
+  }
+}
+
+.mobileHeader {
+  display: flex;
+  align-items: center;
+  &__logo {
+    text-align: center;
+  
+  }
+  &__drawer {
+    float: right;
+    margin-right: 20px;
+    border: none;
+  }
+}

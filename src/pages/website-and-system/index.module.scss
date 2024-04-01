@@ -1,0 +1,114 @@
+.navContainer {
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  &__body {
+    width: 100%;
+    @include tablet {
+      margin-left: 20px;
+    }
+    @include mobile {
+      margin-left: 20px;
+    }
+    & > ul {
+      & > li {
+        cursor: pointer;
+        list-style: disc;
+        padding: 20px 0;
+        border-bottom: 1px solid $borderColor;
+      }
+      & > li:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+.content {
+  &__header {
+    font-size: 43px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    @include tablet {
+      font-size: 30px;
+    }
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+  &__text {
+    & > div {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      font-size: 18px;
+      font-weight: 600;
+    }
+    & > p {
+    }
+  }
+}
+.activeNav {
+  color: $primaryColor;
+  font-weight: 600;
+}
+
+.projectImage {
+  width: 100%;
+  height: 300px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  & > img {
+    width: 100%;
+    height: 100%;
+  }
+  &__modalOpen {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 80, 181, 0.67);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    opacity: 0;
+    transition: all 1s ease;
+  }
+  &:hover &__modalOpen {
+    display: flex;
+    opacity: 1;
+  }
+}
+
+.projectHeader {
+  min-height: 80px;
+  overflow: hidden;
+  &__projectName {
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 120%;
+    margin-bottom: 10px;
+    @include mobile {
+      margin-top: 20px;
+    }
+    @include custom-breakpoint(1200px, 1320px) {
+      font-size: 18px;
+    }
+  }
+
+  &__projectDesc {
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 120%;
+    margin-bottom: 10px;
+    word-wrap: break-word;
+  }
+}

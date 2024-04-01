@@ -1,0 +1,112 @@
+.test {
+  @include desktop {
+    flex-basis: 500px !important;
+  }
+
+  @include custom-breakpoint(1690px, 3000px) {
+    flex-basis: 1250px !important;
+  }
+  @include custom-breakpoint(1550px, 1689px) {
+    flex-basis: 1050px !important;
+  }
+}
+
+.storeContainer {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.store {
+  position: relative;
+  &__itemImageHorizon {
+    height: 100%;
+    width: 100%;
+    max-height: 422px;
+    & > img {
+      width: 100%;
+      max-height: 418px;
+      @include large-desktop {
+        height: 100%;
+      }
+    }
+  }
+
+  &__itemImage {
+    width: 100%;
+    height: 100%;
+    &__end {
+      width: 100%;
+
+      height: 100%;
+
+      @include tablet {
+        height: 213.75px;
+      }
+      @include desktop {
+        height: 353.3px;
+      }
+      @include custom-breakpoint(2000px, 3000px) {
+        height: 658.5px;
+      }
+      & > img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+    &__modal {
+      z-index: 2;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.5);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 1s ease;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__itemContent {
+    padding: 40px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: $primaryColor;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    @include tablet {
+      padding: 20px;
+    }
+  }
+}
+
+.modal {
+  backdrop-filter: blur(7px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(220, 220, 220, 0.5);
+  &__content {
+    color: #0050B5;
+  }
+}

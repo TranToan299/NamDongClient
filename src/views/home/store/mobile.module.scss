@@ -1,0 +1,63 @@
+.store {
+  position: relative;
+
+  &__itemImage {
+    width: 100%;
+    height: 100%;
+    // object-fit: cover;
+    & > img {
+      width: 100%;
+      height: 100%;
+    }
+    &__modal {
+      z-index: 2;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.5);
+      transform: matrix(-1, 0, 0, 1, 0, 0);
+      position: absolute;
+      opacity: 0;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      transition: all 1s ease;
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  &__itemContent {
+    padding: 40px 30px;
+    color: white;
+    width: 100%;
+    height: 100%;
+    background-color: $primaryColor;
+    &__header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+    & > p {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: rgba(220, 220, 220, 0.5);
+  &__content {
+  }
+}

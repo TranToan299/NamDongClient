@@ -1,0 +1,54 @@
+.image {
+  margin-right: 30px;
+  width: 100%;
+  height: 100%;
+  & > img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    max-height: 320px;
+  }
+}
+
+.content {
+  margin-left: 30px;
+  @include mobile {
+    margin-left: 0px;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 53px;
+    line-height: 63.6px;
+    @include custom-breakpoint(1200px, 1320px) {
+      font-size: 48px;
+    }
+    @include mobile {
+      margin-top: 40px;
+    }
+  }
+  &__subtitle {
+    margin-top: 20px;
+    margin-bottom: 40px;
+    line-height: 16.8px;
+    color: $subColor;
+    @include tablet {
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+  }
+  &__list {
+    & > p {
+      margin-top: 40px;
+      font-size: 18px;
+      margin-bottom: 30px;
+      line-height: 21.6px;
+    }
+    & > ul > li:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    & > ul > li > span {
+      margin-right: 20px;
+      color: $primaryColor;
+    }
+  }
+}

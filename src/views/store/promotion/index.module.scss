@@ -1,0 +1,121 @@
+.promotion {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  @include mobile {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  &__image {
+    padding-right: 15px;
+    width: 100%;
+    height: 170px;
+
+    @include mobile {
+      padding-right: 10px;
+      height: 82px;
+    }
+    & > img {
+      width: 100%;
+      height: 100%;
+
+      @include mobile {
+        width: 100%;
+      }
+    }
+  }
+}
+.content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+
+  &__image {
+    width: 100%;
+    max-height: 568px;
+
+    & > img {
+      object-fit: fill;
+      width: 100%;
+      height: 100%;
+
+      @include mobile {
+        max-height: 265px;
+        width: 100%;
+      }
+    }
+  }
+}
+.body {
+  padding: 70px 40px 40px 40px;
+  background-color: #f4f4f5;
+
+  &__header {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 22px;
+
+    & > span {
+      font-weight: 600;
+      font-size: 22px;
+      margin-bottom: 20px;
+    }
+  }
+  &__text {
+    margin-bottom: 20px;
+  }
+  &__price {
+    font-size: 53px;
+    font-weight: 600;
+    color: $primaryColor;
+    line-height: 63.6px;
+    margin-block: 30px;
+    & > span {
+      font-size: 22px;
+      line-height: 26.4px;
+      text-decoration: line-through;
+      font-weight: 400;
+      margin-left: 20px;
+      color: #b6b6b6;
+      @include large-desktop {
+        font-size: 17px;
+      }
+      @include mobile {
+        display: block;
+        margin-left: 0px;
+        margin-bottom: 20px;
+      }
+    }
+    @include large-desktop {
+      font-size: $fontSizeTitleSmallLap;
+    }
+  }
+  &__date {
+    text-align: center;
+    padding: 15px;
+    background-color: #fff;
+    @include large-desktop {
+      font-size: 10px;
+      line-height: 16.8px;
+    }
+    & > p {
+      font-size: 27px;
+      line-height: 32.4px;
+      font-weight: 400;
+      text-align: center;
+      @include large-desktop {
+        font-size: 20px;
+        line-height: 20px;
+      }
+    }
+    @include large-desktop {
+      padding: 15px;
+    }
+  }
+  &__button {
+    margin-top: 40px;
+    @include mobile {
+      margin-top: 20px;
+    }
+  }
+}

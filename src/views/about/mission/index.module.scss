@@ -1,0 +1,46 @@
+.mission {
+  // margin-top: 80px;
+  &__title {
+    text-align: center;
+    @include mobile {
+      text-align: start;
+    }
+    .title__subtitle {
+      padding-left: 13.5vw;
+      padding-right: 13.5vw;
+      @include mobile {
+        margin-top: 20px;
+        padding:0
+      }
+    }
+  }
+  &__item {
+    margin-top: 40px;
+    padding: 50px 40px;
+    height: 100%;
+    background-color: #f4f4f5;
+ 
+    @include mobile {
+      padding:40px 30px 50px 30px;
+    }
+    &__header {
+      min-height: 120px;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 26.4px;
+      margin-bottom: 40px;
+
+      &__icon {
+        margin-bottom: 20px;
+        transform: translateY(-10px);
+        font-size: 47px;
+        color: $primaryColor;
+      }
+    }
+    &__content {
+      & > p:first-child {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

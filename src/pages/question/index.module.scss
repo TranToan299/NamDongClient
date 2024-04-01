@@ -1,0 +1,95 @@
+.panel {
+  padding-left: 200px;
+  padding-right: 200px;
+  background-color: white;
+  @include tablet {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  @include tablet {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  &__title {
+    padding-right: 75px;
+    text-align: justify;
+    position: relative;
+    transition: all 1s ease;
+    @include mobile {
+      padding-right: 20px;
+    }
+    & > span {
+      position: absolute;
+      left: -35px;
+      top: -3px;
+      transition: all 1s ease;
+      @include mobile {
+        left: -30px;
+      }
+    }
+  }
+  &__content {
+    padding-right: 75px;
+
+    @include tablet {
+      padding-right: 75px;
+    }
+    @include mobile {
+      padding-right: 10px;
+    }
+    & > p {
+      margin-bottom:5px;
+    }
+    & ul li {
+      list-style: disc;
+      .subList {
+        padding-left: 25px;
+        & > li {
+          list-style: circle;
+        }
+        &__desc {
+          padding-left: 30px;
+         
+        }
+      }
+      
+    }
+  }
+}
+
+.panel__title.activePanel {
+  transition: all 0.5s ease;
+  color: $primaryColor;
+  font-weight: 600;
+  font-size: 18px;
+  & > span {
+    position: absolute;
+    left: -35px;
+    top: 0px;
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 80px;
+  @include mobile {
+    margin-bottom: 40px;
+  }
+  &__title {
+    font-size: 43px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    line-height: 51.5px;
+  }
+  & > p {
+    padding: 0 200px;
+    @include tablet {
+      padding: 0 20px;
+    }
+
+    @include mobile {
+      padding: 0 10px;
+    }
+  }
+}
+

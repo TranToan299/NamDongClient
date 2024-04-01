@@ -1,0 +1,200 @@
+.furnitureDetail {
+  &__title {
+    text-align: center;
+  }
+  &__subtitle {
+    word-wrap: break-word;
+  }
+  &__content {
+    margin-top: 76px;
+    @include mobile {
+      margin-top: 20px;
+    }
+    &__imagesContainer {
+      display: flex;
+      margin-bottom: 30px;
+      &__item {
+        position: relative;
+        width: 100%;
+        // min-width: 155px;
+        height: 155px;
+
+        @include mobile {
+          height: 80px;
+        }
+        & > img {
+          width: 100%;
+          height: 100%;
+        }
+        &__modal {
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 80, 181, 0.67);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          color: white;
+          opacity: 0;
+          transition: all 1s ease;
+        }
+        &:hover &__modal {
+          display: flex;
+          opacity: 1;
+        }
+      }
+    }
+    &__left {
+      margin-top: 30px;
+
+      & img {
+        width: 100%;
+      }
+    }
+  }
+}
+
+.halfImage {
+  margin-top: 30px;
+  margin-bottom: 30px;
+  &__item1 {
+    position: relative;
+
+    & > img {
+      width: 100%;
+      height: 100%;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  }
+  &__item2 {
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+
+    & > img {
+      height: 100%;
+      width: 100%;
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+  }
+}
+.right {
+  @include tablet {
+    margin-top: 30px;
+  }
+  &__top {
+    text-align: center;
+    & > div {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    & > p {
+      margin-top: 30px;
+    }
+  }
+  &__bottom {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #f4f4f5;
+    text-align: center;
+    &__header {
+      font-size: 22px;
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    &__content {
+      &__item {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: nowrap;
+        white-space: nowrap;
+        margin-bottom: 20px;
+        &__name {
+        }
+        &__line {
+          width: 100%; /* Chiều rộng của đường gạch */
+          border-bottom: 1px dashed black; /* Đường gạch nối từ trái sang phải */
+        }
+        &__price {
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  &__image {
+    & > img {
+      width: 650px;
+      height: 650px;
+      overflow: hidden;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      @include mobile {
+        width: 235px;
+        height: 235px;
+      }
+    }
+  }
+  &__title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    &:first-child {
+    }
+    &:last-child {
+    }
+  }
+  .toolbar {
+    &__prev {
+      height: 50px;
+      background: none;
+      border: none;
+      position: absolute;
+      top: 50%;
+      left: 250px;
+      font-size: 32px;
+      @include tablet {
+        font-size: 20px;
+        left: 20px;
+      }
+      @include mobile {
+        left: 10px;
+      }
+    }
+    &__next {
+      height: 50px;
+      background: none;
+      border: none;
+      position: absolute;
+      top: 50%;
+      right: 250px;
+      font-size: 32px;
+      @include tablet {
+        font-size: 20px;
+        right: 20px;
+      }
+      @include mobile {
+        right: 10px;
+      }
+    }
+  }
+}

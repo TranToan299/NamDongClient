@@ -1,0 +1,28 @@
+.facilityContainer {
+  margin-bottom: 40px;
+}
+.facility {
+  &__header {
+    margin-top:20px;
+    margin-bottom:40px;
+    & > p {
+      margin-top: 20px;
+      // padding-right: 600px;
+      @include tablet {
+        // padding-right: 100px;
+      }
+      @include mobile {
+        // padding-right: 20px;
+      }
+    }
+  }
+  &__panel {
+  
+    &__content {
+        &__address {
+            margin-bottom:40px;
+    
+        }
+    }
+  }
+}

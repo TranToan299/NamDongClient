@@ -1,0 +1,41 @@
+.content {
+  .intro {
+    & div {
+      font-size: 14px;
+      font-weight: 400;
+    }
+  }
+  .title {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 18px;
+    font-weight: 600;
+
+    &__sub {
+      margin-bottom: 5px;
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  & > ul > li {
+
+    margin-bottom: 5px;
+  }
+  .company {
+    & > p + p {
+      margin-top: 10px;
+    }
+    & p:first-of-type {
+      font-size: 14px;
+      font-weight: 400;
+      
+    }
+  }
+}
+
+.subList > li {
+  margin-top: 5px;
+  margin-left: 20px;
+  margin-bottom: 5px;
+  list-style: circle;
+}

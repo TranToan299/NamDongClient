@@ -1,0 +1,96 @@
+.modal {
+  width: 100%;
+  height: 100%;
+
+  &__image {
+    & > img {
+      width: auto;
+      height: 600px;
+      overflow: hidden;
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%);
+      @include mobile {
+        width: 235px;
+        height: 235px;
+      }
+    }
+  }
+  &__title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 45%;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    &:first-child {
+    }
+    &:last-child {
+    }
+  }
+  &__titleMobile {
+    text-align: center;
+    margin-top: 20px;
+    & > div {
+      margin-bottom: 20px;
+
+    }
+
+  }
+  .toolbar {
+    &__prev {
+      cursor: pointer;
+      height: 50px;
+      background: none;
+      border: none;
+      position: absolute;
+      top: 35%;
+      left: 23.5%;
+      font-size: 32px;
+      @include tablet {
+        left: 10%;
+      }
+      @include mobile {
+        left: 10px;
+      }
+      @include custom-breakpoint(1000px, 1250px) {
+        left: 15%;
+      }
+      @include custom-breakpoint(1251px, 1440px) {
+        left: 20%;
+      }
+      &:active,
+      &:focus {
+        border: none;
+      }
+    }
+    &__next {
+      cursor: pointer;
+      height: 50px;
+      background: none;
+      border: none;
+      position: absolute;
+      top: 35%;
+      right: 23.5%;
+      font-size: 32px;
+      @include tablet {
+        right: 10%;
+      }
+      @include mobile {
+        right: 10px;
+      }
+      @include custom-breakpoint(1000px, 1250px) {
+        right: 15%;
+      }
+      @include custom-breakpoint(1251px, 1440px) {
+        right: 20%;
+      }
+      &:active,
+      &:focus {
+        border: none;
+      }
+    }
+  }
+}

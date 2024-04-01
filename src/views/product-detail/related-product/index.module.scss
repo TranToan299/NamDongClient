@@ -1,0 +1,80 @@
+.promotion {
+  margin-top: 80px;
+  margin-bottom: 80px;
+  @include tablet {
+    margin-top: 30px;
+  }
+  &__image {
+    width: 100%;
+    & > img {
+      width: 100%;
+    }
+  }
+}
+
+.content {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  @include tablet {
+    margin-top: 20px;
+  }
+  &__image {
+    width: 100%;
+    & > img {
+      width: 100%;
+    }
+  }
+}
+.body {
+  &__header {
+    font-weight: 600;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  &__price {
+    font-size: 43px;
+    font-weight: 600;
+  }
+  &__technical {
+    margin-bottom: 20px;
+
+    & > div {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+  }
+  &__meterial {
+    @extend .body__technical;
+  }
+
+  &__button {
+    margin-top: 40px;
+  }
+}
+
+.information {
+  &__header {
+    margin-bottom:20px;
+    font-weight: 600 ;
+
+  }
+  &__image {
+    margin-top:30px;
+    width: 100%;
+    text-align: center;
+    & >img {
+      padding: 0 200px;
+      width: 100%;
+    }
+  }
+}
+
+.related {
+  margin-top:80px;
+  &__header {
+    margin-bottom:30px;
+    font-size: 22px;
+    font-weight: 600;
+  }
+}

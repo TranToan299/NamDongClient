@@ -1,0 +1,20 @@
+.quantity {
+  display: flex;
+  width: 120px;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid rgba(120, 120, 120, 0.5);
+  &__button {
+    border: none;
+    background-color: none;
+  }
+}
+
+.total {
+  font-weight: 600;
+  font-size: 14px;
+}
+.price {
+  @extend .total;
+  word-wrap: break-word;
+}
